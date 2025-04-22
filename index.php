@@ -13,6 +13,7 @@
 	require_once "./src/Enums/Formato.php"; //Enum class
 
 	require_once "./src/Models/Livro.php"; //main class
+
 	require_once "./src/Models/Literario.php"; //subclass
 	require_once "./src/Models/Tecnico.php"; //subclass
 	require_once "./src/Models/Programacao.php"; //subclass
@@ -39,7 +40,6 @@
 		<li><b>Autor do livro: </b><?= $livroProgramacao->getAutor() ?></li>
 		<li><b>Gênero do livro: </b><?= $livroProgramacao->getLinguagem() ?></li>
 		<li><b>Formato: </b><?= $livroProgramacao->getFormato()->name ?></li>
-
 	</ul>
 </body>
 
