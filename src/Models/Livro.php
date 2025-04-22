@@ -1,18 +1,17 @@
 <?php
 
-class Livro
+abstract class Livro
 {
   private string $titulo;
   private string $autor;
-  private int $paginas;
 
-  public function __construct(string $titulo, string $autor, int $paginas)
+  public function __construct(string $titulo, string $autor)
   {
     $this->setTitulo($titulo);
     $this->setAutor($autor);
-    $this->setPaginas($paginas);
   }
 
+  //setters
   private function setTitulo(string $titulo): void
   {
     $this->titulo = $titulo;
@@ -23,12 +22,7 @@ class Livro
     $this->autor = $autor;
   }
 
-  private function setPaginas(int $paginas): void
-  {
-    $this->paginas = $paginas;
-  }
-
-
+  //getters
   public function getTitulo()
   {
     return $this->titulo;
@@ -37,10 +31,5 @@ class Livro
   public function getAutor()
   {
     return $this->autor;
-  }
-
-  public function getPaginas()
-  {
-    return $this->paginas;
   }
 }
